@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FaceClassifierX</string>
+    <string name="close_btn">Close button</string>
+    <string name="settings">Settings</string>
+    <string name="flash">Flash</string>
+    <string name="on">on</string>
+    <string name="off">off</string>
+    <string name="resolution">Output Resolution</string>
+    <string name="s1280x720">1280 x 720</string>
+</resources>

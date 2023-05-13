@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:keepScreenOn="true"
+        />
+
+    <ImageView
+        android:id="@+id/semi_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2"/>
+
+        <ImageButton
+            android:id="@+id/settings_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_settings"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:background="@drawable/oval_btn"
+            android:elevation="4dp"
+            android:backgroundTint="@color/purple_500"
+            tools:ignore="ContentDescription" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/capture_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_camera"
+            android:background="@drawable/oval_btn"
+            android:backgroundTint="@color/purple_700"
+            android:elevation="4dp"
+            tools:ignore="ContentDescription" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/switch_camera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_camera_front"
+            android:background="@drawable/oval_btn"
+            android:elevation="4dp"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:backgroundTint="@color/purple_500"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/sub_lay_settings_dialog" />
+
+</RelativeLayout>
